@@ -7,6 +7,7 @@ resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.bucket_name
 
   tags = var.tags
+  #tags = var.vpc_name      # Parent module's variable NOT accesible
 }
 
 resource "aws_s3_bucket_website_configuration" "s3_bucket" {
